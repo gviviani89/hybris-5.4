@@ -1,0 +1,24 @@
+INSERT_UPDATE Food;	code[unique=true];name[lang=en];type[lang=en]
+					;1;Pasta Barilla;Spaghetti
+					;2;Pasta Barilla;Rigatoni
+					;3;Acqua Levissima;Naturale
+					;4;Carne di Maiale;Guanciale
+					;5;Sale;Fino
+					;6;Cirio Pomodori;Passata
+					;7;Carne di Maiale;Macinato
+					;8;Formaggio Grattugiato;Parmigiano Reggiano
+					;9;Pepe;Nero
+					;10;Uova;Medie
+					;11;Olio;EVO
+					;12;Formaggio Grattugiato;Pecorino Romano
+ 
+INSERT_UPDATE Recipe;	code[unique=true];name[lang=en];description[lang=en];time;difficulty(code);person;recipeEntries(food(code))
+						;101;Rigatoni alla Bolognese;Ricetta dei Rigatoni al Ragù alla Bolognese;40;Normal;4;2,3,5,6,8
+							
+INSERT_UPDATE RecipeEntry;	food(code)[unique=true];amount;name[lang=en];unit(code)
+							;2;500;Rigatoni;pieces
+							;3;1;Acqua;pieces
+							;5;10;Sale;pieces
+							;6;250;Passata;pieces
+							;8;50;Parmigiano;pieces
+							
