@@ -28,11 +28,16 @@
 	</enumtypes>	
 	
 	<relations>
+	    <relation code="RecipeMenuRelation" localized="false" generate="true" autocreate="true">
+	    	 <deployment table="Menu" typecode="10505"/>
+	       <sourceElement type="Menu" qualifier="recipe_menus" cardinality="many"/>
+	       <targetElement type="Recipe" qualifier="recipes" cardinality="many"/>
+	    </relation>
 	    <relation code="RecipeRecipeEntryRelation" localized="false" generate="true" autocreate="true">
 	       <sourceElement type="Recipe" qualifier="recipe_cardinality" cardinality="one" />
 	       <targetElement type="RecipeEntry" qualifier="recipeEntries" cardinality="many"/>
 	    </relation>
-	</relations> 	
+	</relations>  	
 
 	<itemtypes>
 <!--
@@ -138,7 +143,22 @@
                     <persistence type="property" />
                 </attribute> 
             </attributes>
-     		</itemtype>     			 		
+     		</itemtype>
+     		
+     		<itemtype code="Menu" generate="true" autocreate="true">
+            <deployment table="Menu" typecode="10504" />
+            <attributes>
+            	<attribute qualifier="code" type="java.Lang.String">
+            	    <description>Code</description>
+					    <persistence type="property"/>
+					    <modifiers optional="false" unique="true"/>
+					</attribute>
+                <attribute qualifier="name" type="localized:java.lang.String" >
+                	  <description>Name</description>
+                    <persistence type="property"/>
+                </attribute>
+            </attributes>
+     		</itemtype>         			 		
 
 	</itemtypes>
 </items>
