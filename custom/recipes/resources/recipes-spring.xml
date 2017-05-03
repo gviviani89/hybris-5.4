@@ -31,7 +31,7 @@
 			<property name="typeCode" value="Recipe"/>
 			</bean>		
 
-	<bean id="recipeMenuJob" class="de.hybris.platform.recipes.jobs.RecipeMenuJob" parent = "abstractJobPerformable" >
+	<bean id="recipeMenuJob" class="de.hybris.platform.recipes.jobs.RecipeMenuJob" parent = "abstractJobPerformable" />
 	
 	<!--
 	The hybris platform provides one single Spring application context for beans located at the jalo layer.
