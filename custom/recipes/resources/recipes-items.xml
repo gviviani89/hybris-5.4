@@ -29,7 +29,7 @@
 	
 	<relations>
 	    <relation code="RecipeMenuRelation" localized="false" generate="true" autocreate="true">
-	    	 <deployment table="Menu" typecode="10505"/>
+	    	 <deployment table="Menu" typecode="10600"/>
 	       <sourceElement type="Menu" qualifier="recipe_menus" cardinality="many"/>
 	       <targetElement type="Recipe" qualifier="recipes" cardinality="many"/>
 	    </relation>
@@ -146,7 +146,7 @@
      		</itemtype>
      		
      		<itemtype code="Menu" generate="true" autocreate="true">
-            <deployment table="Menu" typecode="10504" />
+            <deployment table="Menu" typecode="10700" />
             <attributes>
             	<attribute qualifier="code" type="java.Lang.String">
             	    <description>Code</description>
